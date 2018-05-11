@@ -35,7 +35,7 @@ $user_avatar = 'img/user.jpg';
                  <div class="user-menu__logged">
                    <p></p>
                      </div>
-        <?php  }else { ?>
+        <?php  } else { ?>
                 <ul class="user-menu__list">
                    <li class="user-menu__item">
                       <a href="#">Регистрация</a>
