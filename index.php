@@ -13,7 +13,14 @@ $user_avatar = 'img/user.jpg';
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-
+    <?php
+    $categories =      [  0=> [ 'Доски и лыжи' => '2014 Rossignol] District Snowboard'],
+                        1=>   [ 'Крепления' => 'Union Contact Pro 2015 года размер L/XL' ],
+                        2=>    ['Ботинки' => 'Ботинки для сноуборда DC Mutiny Charocal'],
+                        3=>    ['Одежда' => 'Куртка для сноуборда DC Mutiny Charocal' ],
+                        4=>    ['Инструменты' => 'DC Ply Mens 2016/2017 Snowboard'],
+                        5=>['Разное' => 'Маска Oakley Canopy']
+                    ];?>
 <header class="main-header">
     <div class="main-header__container container">
         <h1 class="visually-hidden">YetiCave</h1>
@@ -108,6 +115,10 @@ $user_avatar = 'img/user.jpg';
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
+        <?php foreach ($categories as $value) {
+                 $value = "$value + 1";
+                print($categories);
+        }?>
             <li class="nav__item">
                 <a href="all-lots.html">Доски и лыжи</a>
             </li>
