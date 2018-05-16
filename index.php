@@ -14,13 +14,43 @@ $user_avatar = 'img/user.jpg';
 </head>
 <body>
     <?php
-    $categories =      [  0=> [ 'Доски и лыжи' => '2014 Rossignol] District Snowboard'],
-                        1=>   [ 'Крепления' => 'Union Contact Pro 2015 года размер L/XL' ],
-                        2=>    ['Ботинки' => 'Ботинки для сноуборда DC Mutiny Charocal'],
-                        3=>    ['Одежда' => 'Куртка для сноуборда DC Mutiny Charocal' ],
-                        4=>    ['Инструменты' => 'DC Ply Mens 2016/2017 Snowboard'],
-                        5=>['Разное' => 'Маска Oakley Canopy']
-                    ];?>
+    $categories =    ['Доски и лыжи', 'Крепления', 'Ботинки', 'Одежда', 'Инструменты', 'Разное'];
+    $items = [
+        ['name'=> '2014 Rossignol District Snowboard',
+         'cat' => 'Доски и лыжи',
+         'key'=> 0 ,
+         'price'=> '10999',
+         'img'=> 'img/lot-1.jpg'],
+         ['name'=> 'DC Ply Mens 2016/2017 Snowboard',
+          'cat' => 'Крепления',
+          'key'=> 1 ,
+          'price'=> '159999',
+          'img'=> 'img/lot-2.jpg'],
+          ['name'=> 'Крепления Union Contact Pro 2015 года размер L/XL',
+           'cat' => 'Ботинки',
+           'key'=> 2 ,
+           'price'=> '8000',
+           'img'=> 'img/lot-3.jpg'],
+           ['name'=> 'Ботинки для сноуборда DC Mutiny Charocal',
+            'cat' => 'Одежда',
+            'key'=> 3 ,
+            'price'=> '10999',
+            'img'=> 'img/lot-4.jpg'],
+            ['name'=> 'Куртка для сноуборда DC Mutiny Charocal	',
+             'cat' => 'Инструменты',
+             'key'=> 4 ,
+             'price'=> '7500',
+             'img'=> 'img/lot-5.jpg'],
+             ['name'=> 'Маска Oakley Canopy',
+              'cat' => 'Разное',
+              'key' => 5 ,
+              'price' => '5400',
+              'img' => 'img/lot-6.jpg'],
+          ];
+
+
+    ?>
+
 <header class="main-header">
     <div class="main-header__container container">
         <h1 class="visually-hidden">YetiCave</h1>
@@ -115,13 +145,12 @@ $user_avatar = 'img/user.jpg';
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
-        <?php foreach ($categories as $value) {
-                 $value = "$value + 1";
-                print($categories);
-        }?>
+        <?php foreach ($categories as $value): ?>
+
             <li class="nav__item">
-                <a href="all-lots.html">Доски и лыжи</a>
+                <a href="<?=$value['cat']; ?>">Доски и лыжи</a>
             </li>
+        <?php endforeach; ?>
             <li class="nav__item">
                 <a href="all-lots.html">Крепления</a>
             </li>
@@ -137,6 +166,7 @@ $user_avatar = 'img/user.jpg';
             <li class="nav__item">
                 <a href="all-lots.html">Разное</a>
             </li>
+
         </ul>
     </nav>
     <div class="main-footer__bottom container">
