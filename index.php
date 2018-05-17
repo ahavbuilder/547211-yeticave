@@ -18,29 +18,29 @@ $user_avatar = 'img/user.jpg';
     $items = [
         ['name'=> '2014 Rossignol District Snowboard',
          'cat' => 'Доски и лыжи',
-         'key'=> 0 ,
+         'key' => 0 ,
          'price'=> '10999',
-         'img'=> 'img/lot-1.jpg'],
+         'img' => 'img/lot-1.jpg'],
          ['name'=> 'DC Ply Mens 2016/2017 Snowboard',
           'cat' => 'Крепления',
-          'key'=> 1 ,
+          'key' => 1 ,
           'price'=> '159999',
-          'img'=> 'img/lot-2.jpg'],
-          ['name'=> 'Крепления Union Contact Pro 2015 года размер L/XL',
+          'img' => 'img/lot-2.jpg'],
+          ['name' => 'Крепления Union Contact Pro 2015 года размер L/XL',
            'cat' => 'Ботинки',
            'key'=> 2 ,
            'price'=> '8000',
-           'img'=> 'img/lot-3.jpg'],
+           'img' => 'img/lot-3.jpg'],
            ['name'=> 'Ботинки для сноуборда DC Mutiny Charocal',
             'cat' => 'Одежда',
-            'key'=> 3 ,
+            'key' => 3 ,
             'price'=> '10999',
             'img'=> 'img/lot-4.jpg'],
             ['name'=> 'Куртка для сноуборда DC Mutiny Charocal	',
              'cat' => 'Инструменты',
-             'key'=> 4 ,
+             'key' => 4 ,
              'price'=> '7500',
-             'img'=> 'img/lot-5.jpg'],
+             'img' => 'img/lot-5.jpg'],
              ['name'=> 'Маска Oakley Canopy',
               'cat' => 'Разное',
               'key' => 5 ,
@@ -145,27 +145,17 @@ $user_avatar = 'img/user.jpg';
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
-        <?php foreach ($categories as $value): ?>
+        <?php foreach ($items as $value): ?>
 
             <li class="nav__item">
-                <a href="<?=$value['cat']; ?>">Доски и лыжи</a>
+
+                    <strong><?php print $categories[$value['key']]; ?></strong><br />
+                    <strong><?=$value['name']; ?></strong><br />
+                    <small><?=$value['price']; ?></small><br />
+                    <img src="<?=$value['img']; ?>">
             </li>
         <?php endforeach; ?>
-            <li class="nav__item">
-                <a href="all-lots.html">Крепления</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Ботинки</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Одежда</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Инструменты</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Разное</a>
-            </li>
+
 
         </ul>
     </nav>
