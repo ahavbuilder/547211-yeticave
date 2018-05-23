@@ -4,6 +4,24 @@ $is_auth = (bool) rand(0, 1);
 $user_name = 'Константин';
 $user_avatar = 'img/user.jpg';
 ?>
+<?php
+function priceFormat($hollowNumber) {
+    $hollowNumber = ceil($hollowNumber);
+
+    $hollowNumber = number_format($hollowNumber, 0 , "." , " ");
+
+    return $hollowNumber;
+    }
+
+
+
+
+
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -126,7 +144,8 @@ $user_avatar = 'img/user.jpg';
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?=$value["price"]; ?><b class="rub">р</b></span>
+                            <span class="lot__cost"><?= priceFormat($value["price"]); ?><b class="rub">₽</b></span>
+
                         </div>
                         <div class="lot__timer timer">
 
