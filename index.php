@@ -20,7 +20,6 @@ function priceFormat($hollowNumber) {
 
 
 
-
 ?>
 <!DOCTYPE html>
 <html lang="ru">
