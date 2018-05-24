@@ -10,7 +10,6 @@ function priceFormat($hollowNumber) {
 
     $hollowNumber = number_format($hollowNumber, 0 , "." , " ");
 
-    $hollowNumber.= "<b class=\"rub\">Р</b>";
     return $hollowNumber;
     }
 
@@ -140,12 +139,12 @@ function priceFormat($hollowNumber) {
                     <img src=<?=$value['img']; ?> width="350" height="260" alt="Сноуборд">
                 </div>
                 <div class="lot__info">
-                    <span class="lot__category"><?=$categories[$value['key']]; ?></span>
+                    <span class="lot__category"><?=$categories[$value['key']] ?></span>
                     <h3 class="lot__title"><a class="text-link" href="lot.html"><?=$value["name"]; ?>  </a></h3>
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?= priceFormat($value["price"]); ?></span>
+                            <span class="lot__cost"><?= priceFormat($value["price"]); ?><b class="rub">₽</b></span>
 
                         </div>
                         <div class="lot__timer timer">
